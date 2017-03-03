@@ -24,7 +24,7 @@ RUN mkdir -p "${SPARK_HOME}" \
   && rm -rf $ARCHIVE
 COPY spark-env.sh $SPARK_HOME/conf/spark-env.sh
 ENV PATH=$PATH:$SPARK_HOME/bin
-
+ENV SPARK_CLASSPATH=$SPARK_HOME/lib/sequoiadb.jar:$SPARK_HOME/lib/spark-sequoiadb_2.11-2.8.0.jar
 # Ports
 EXPOSE 6066 7077 8080 8081
 
