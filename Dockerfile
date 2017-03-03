@@ -30,6 +30,8 @@ EXPOSE 6066 7077 8080 8081
 
 # Copy start script
 COPY start-spark /opt/util/bin/start-spark
+# Copy driver
+COPY sequoiadb-driver-2.8.0.jar $SPARK_HOME/lib/sequoiadb.jar
 
 # Fix environment for other users
 RUN echo "export SPARK_HOME=$SPARK_HOME" >> /etc/bash.bashrc \
