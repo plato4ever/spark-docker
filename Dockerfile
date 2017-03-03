@@ -45,3 +45,6 @@ RUN echo '#!/usr/bin/env bash' > /usr/bin/master \
   && echo '#!/usr/bin/env bash' > /usr/bin/worker \
   && echo 'start-spark worker $1' >> /usr/bin/worker \
   && chmod +x /usr/bin/worker
+  
+# add spark dir
+RUN mkdir /spark
